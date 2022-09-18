@@ -58,7 +58,7 @@ def index(r):
                 # print('in plus  stack(top] = ',stack[top])
                 num = getnum(stack[top])
                 print('num in plus = ', num)
-                if 2 > num:
+                if 2 > num or 2==num:
                     top += 1
                     stack[top] = "+2"
 
@@ -73,7 +73,7 @@ def index(r):
                     topans += 1
             elif st2[i] == '-':
                 num = getnum(stack[top])
-                if 1 > num:
+                if 1 > num or 1==num:
                     top += 1
                     stack[top] = '-1'
 
@@ -83,7 +83,7 @@ def index(r):
                     topans += 1
             elif st2[i] == '*':
                 num = getnum(stack[top])
-                if 4 > num:
+                if 4 > num or 4==num:
                     top += 1
                     stack[top] = '*4'
 
@@ -93,7 +93,7 @@ def index(r):
                     topans += 1
             elif st2[i] == '/':
                 num = getnum(stack[top])
-                if 3 > num:
+                if 3 > num or 3==num:
                     top += 1
                     stack[top] = '/3'
 
@@ -103,7 +103,7 @@ def index(r):
                     topans += 1
             elif st2[i] == '^':
                 num = getnum(stack[top])
-                if 5 > num:
+                if 5 > num or 5==num:
                     top += 1
                     stack[top] = '^5'
 
