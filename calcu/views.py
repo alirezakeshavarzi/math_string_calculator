@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.template import loader
 from django.http import HttpResponse
 
+import math
 
 def index(r):
     st2 = r.GET.get('str', False)
@@ -174,6 +175,15 @@ def index(r):
                         top -= 1
                     else:
                         stack2[top - 1] = int(stack2[top - 1]) / int(stack2[top])
+                        stack2[top] = 0
+                        top -= 1
+                elif arr[i] == '^5':
+                    if isfloat(stack2[top - 1]) or isfloat(stack2[top]):
+                        stack2[top - 1] = math.pow(float(stack2[top - 1]), float(stack2[top]))
+                        stack2[top] = 0
+                        top -= 1
+                    else:
+                        stack2[top - 1] = math.pow(int(stack2[top - 1]), int(stack2[top]))
                         stack2[top] = 0
                         top -= 1
             i += 1
