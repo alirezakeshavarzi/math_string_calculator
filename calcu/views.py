@@ -193,7 +193,6 @@ def index(r):
 
     try:
         res = cal(ans, stack)
-        c = {'res': res, 'a': st2}
     except ZeroDivisionError:
         res = "Undefined"
 
