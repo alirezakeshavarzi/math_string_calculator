@@ -191,7 +191,12 @@ def index(r):
 
     stackintoArr(ans, stack, top)
 
-    res = cal(ans, stack)
+    try:
+        res = cal(ans, stack)
+        c = {'res': res, 'a': st2}
+    except ZeroDivisionError:
+        res = "Undefined"
+
 
 
     c = {'res':res, 'a':st2}
