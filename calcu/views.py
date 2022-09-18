@@ -38,12 +38,6 @@ def index(r):
     save = 0
     i = 0
     while i < lstr:
-        print('main str : ', st2)
-        print('first : i = ', i)
-        print('answer(in loop) = ', ans)
-        print('stack(in loop) = ', stack)
-        print('top = ', top)
-        print('topans = ', topans)
 
         if not st2[i].isdigit():
             sub = st2[save:i]
@@ -53,19 +47,13 @@ def index(r):
             topans += 1
 
             if st2[i] == '+':
-                # print('in plus  stack(top] = ',stack[top])
                 num = getnum(stack[top])
-                print('num in plus = ', num)
                 if 2 > num:
                     top += 1
                     stack[top] = "+2"
 
                 elif 2 < num:
                     # top += 1
-                    print(' ')
-                    print('top in pluse = ', top)
-                    print('topans in pluse = ', topans)
-                    print(' ')
                     ans[topans] = stack[top]
                     stack[top] = "+2"
                     topans += 1
@@ -109,8 +97,6 @@ def index(r):
                     ans[topans] = stack[top]
                     stack[top] = '^5'
                     topans += 1
-        print('end : i = ', i)
-        print(' ')
         i += 1
     sub = st2[save:i]
     ans[topans] = sub
